@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<style>
+    body{
+  margin:0;
+  padding:0;
+  font-family:sans serif;
+}
+#app{
+  position:absolute;
+  height:200px;
+  left:50%;
+  top:50%;
+  transform:translate(-50%, -30%);
+  padding:6px 14px;
+  background-color:yellow;
+  box-shadow:2px 2px 20px rgba(0,0,0,0.3);
+}
+h3{
+  font-size:28px;
+  color:blue;
+  letter-spacing:1px;
+}
+.container{
+  position:relative;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:nowrap;
+  justify-content:center;
+  align-items:center;
+}
+.container input[type="text"]{
+  height:46px;
+  width:80%;
+  border:none;
+  font-size:20px;
+  padding-left:10px;
+  transition:all .3s ease-in-out;
+}
+.container button{
+  height:50px;
+  width:100px;
+  border:none;
+  font-size:20px;
+  background-color:gray;
+  color:white;
+  cursor:pointer;
+  transition:all .3s ease-in-out;
+}
+.container button:hover{
+  opacity:0.86;
+}
+::placeholder{
+  color:red;
+}
+.container input[type="text"]:focus{
+  outline:none;
+  box-shadow:inset 2px 2px 6px rgba(0,0,0,0.2);
+}
+.list{
+  position:absolute;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  left:40px;
+}
+list li{
+  background-color:blue;
+  text-align:center;
+  height:40px;
+  color:white;
+  font-size:22px;
+  line-height:38px;
+  margin-top:1px;
+  list-style:none;
+  position:relative;
+}
+.list li i {
+  position:absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  width:40px;
+  text-align:center;
+  line-height:38px;
+  background-color:pink;
+  transition:all .2s linear;
+  cursor:pointer;
+}
+.list li i:hover{
+  background-color:orange;
+}
+
+</style>
+<body>
+    <script src="newvu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <div id="app">
+        {{ message }}
+      </div>
+        
+       
+</body>
+</html>

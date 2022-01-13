@@ -1,0 +1,150 @@
+.<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ima Travel</title>
+    <link rel="stylesheet" type="text/css" href="todo.css">
+    <script src="https://kit.fontawesome.com/b3d3937b35.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lobster&family=Playfair+Display&family=Mystery+Quest&family=Smooch&display=swap" rel="stylesheet">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&&family=Gluten&family=Carter+One&family=Fredoka+One&family=Lobster&family=Righteous&family=Sigmar+One&family=Smooch&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <nav>
+                <h2 class="oneh2"><i>Ima&copy;Travel</i></h2>
+                <input type="checkbox" id="res-menu">
+                <label for="res-menu">
+                    <i class="fas fa-bars" id="s1"></i>
+                    <i class="fas fa-times" id="s2"></i>
+                </label>
+        
+        
+        <ul>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="todo.html">To-Do List</a></li>
+          <li><a href="queries.html" >Queries</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Travel Information</a>
+            <div class="dropdown-content">
+              <a href="information.html">Beach</a>
+              <a href="wildlife.html">Wildlife</a>
+              <a href="hiking.html">Hiking</a>
+              <a href="heritage.html">Heritage</a>
+             
+              <a href="hotel.html">Hotel</a>
+             
+
+               
+                    <li><a href="aboutus.html" >About Us</a></li>
+                    <li><a href="index.html" >Home</a></li>
+            </div>
+          </li>
+        </ul>
+              
+           </nav>
+        </div> 
+        <!---------------------section-1---------------------------->
+<div id="todo">
+   <h2>Things To-Do in Sri Lanka</h2>
+    <div id="app">
+        <div class="container">
+          
+          <input type="text" v-model="todo">
+          <input type="submit" value="Add" @click="storeTodo">
+          <ol class="list">
+            <li v-for="(todo, index) in todos">
+              {{ todo }}
+
+              <button @click="deleteTodo(index)">Delete</button>
+              </li>
+              </ol>
+              </div>
+              </div>
+
+              <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+              <script>
+                  new Vue({
+                      el:'#app',
+
+                      data:{
+                          todos:['go to town' , 'buy new car']
+                      },
+                      methods:{
+                          storeTodo(){
+                              this.todos.push(this.todo)
+                              this.todo=''
+                          },
+                      
+                      deleteTodo(index){
+                          this.todos.splice(index,1)
+                      }
+                      }
+                  })
+              </script>
+
+    
+</div>
+
+        <!-------------------------footer---------------------------------->
+<div class="section-9">
+
+  <div class="footer">
+ 
+        <div class="foot-1">
+          <h2 class="footi">About Us</h2>
+          <p id="about">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti nam quis consequuntur commodi quae doloribus.
+          </p>
+          
+           <ul>
+               <li><a href ="#" class="fab fa-facebook-f"></a> </li>
+               <li><a href="#" class="fab fa-twitter"></a> </li>
+               <li><a href="#" class ="fab fa-youtube"></a> </li>
+               <li><a href="#" class ="fab fa-instagram"></a> </li>
+           </ul>
+          
+       </div>
+         
+       <div class="foot-2">
+           <h2 class="footi">Get In Touch</h2>
+           <i class="fas fa-map-marker-alt"><a href="#">95 South Park Avenue, USA</a></i>
+           <i class="fas fa-phone-alt"><a href="#">+456 875 369 208</a></i>
+           <i class="fa fa-envelope-o"><a href="#">ilakshan968@gmail.com</a></i>
+       </div>
+
+       <div class="foot-3">
+           <h2 class="footi">Quick Links</h2>
+           <i class="fa fa-angle-double-right"><a href="#">Home</a></i>
+           <i class="fa fa-angle-double-right"><a href="#">About us</a></i>
+           <i class="fa fa-angle-double-right"><a href="#">Travel Information</a></i>
+           <i class="fa fa-angle-double-right"><a href="#">Queries</a></i>
+           <i class="fa fa-angle-double-right"><a href="#">To-D0 List</a></i>
+           <i class="fa fa-angle-double-right"><a href="#">Gallery</a></i>
+           <i class="fa fa-angle-double-right"><a href="#">Our Services</a></i>
+       
+       </div>
+
+       <div class="foot-4">
+           <h2 class="footi">News Letters</h2>
+           <p id="news">
+               Sign Up for Our Newsletter to get Latest Updates and Offers. Subscribe to receive news in your inbox.
+           </p>
+           <input type="email" name="Email" placeholder="Enter Your Email">
+           <a class="subscri" href="#">Subscribe</a>
+
+       </div>
+      
+  </div>
+  <div class="copy">
+      IMA-Theme. &copy; 2021 All rights reserved.
+     </div>
+ 
+</div>
+
+</body>
+</html>
